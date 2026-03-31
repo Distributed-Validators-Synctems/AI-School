@@ -118,7 +118,4 @@
 5.  **Реальный результат:** Обучение не закончится, пока вы не создадите реальный продукт, который сможете продать или использовать сами.
 
 ---
-121: *Создано для тех, кто хочет строить будущее, а не просто наблюдать за ним.*
-122: 
-123: ---
-124: **Структура проекта:** Публичный учебный план ([AI-School](https://github.com/Distributed-Validators-Synctems/AI-School)) и Приватные методички для менторов ([for_mentors](https://github.com/Distributed-Validators-Synctems/for_mentors)). Подробности в [MAINTAINERS.md](file:///Users/posthuman/Projects/AI-School/AI-School/MAINTAINERS.md).
+*Создано для тех, кто хочет строить будущее, а не просто наблюдать за ним.*

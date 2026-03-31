@@ -119,7 +119,4 @@ The requirement for completing the school is a **fully functional product** crea
 5.  **Real results:** The training won't end until you create a real product that you can sell or use yourself.
 
 ---
-122: *Built for those who want to build the future, not just watch it happen.*
-123: 
-124: ---
-125: **Project Structure:** Public curriculum ([AI-School](https://github.com/Distributed-Validators-Synctems/AI-School)) and Private mentor guides ([for_mentors](https://github.com/Distributed-Validators-Synctems/for_mentors)). See [MAINTAINERS.md](file:///Users/posthuman/Projects/AI-School/AI-School/MAINTAINERS.md) for details.
+*Built for those who want to build the future, not just watch it happen.*
