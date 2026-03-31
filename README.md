@@ -22,11 +22,27 @@ During the course, we will deploy and configure your development "cockpit":
 
 ### Module 1: Foundations & Direct Action Tools
 
-| Session | Topic | Practical Outcome |
-| :--- | :--- | :--- |
-| **01** | **Setting up the "Cockpit"** | Terminal, Claude Code, and Antigravity installation. Your first live web page. |
-| **02** | **Vibe-coding: The Art of Specs** | Designing product architecture in Bolt/Lovable. Creating a visual prototype. |
-| **03** | **Claude Code: AI Hands** | Letting the agent create files, folder structures, and install dependencies on your PC. |
+#### Session 01: Logging into Vibe-coding and setting up the "Cockpit"
+- Theory (30 min): What is Vibe-coding? Why you no longer need to learn syntax, but logic. Tool overview: why the terminal isn't scary.
+- Hands-on (90 min): * Installing VS Code and extensions.
+- Setting up Claude Code and Antigravity.
+- Creating the first project folder.
+- Command: "Make me a simple web page with my resume and a theme change button."
+- Result: A working local page and a configured environment.
+
+#### Session 02: Generating interfaces "with words"
+- Theory (30 min): How to describe ideas so that AI understands the structure. The difference between "make it beautiful" and "use modern minimalism and a dark theme."
+- Hands-on (90 min): * Working in Bolt.new or Lovable.
+- Creating the structure of a future product (an online store, dashboard, or game).
+- Exporting the code to your workspace for further refinement by agents.
+- Result: A finished visual prototype of the project in the browser.
+
+#### Session 03: Claude Code — AI Hands on Your Computer
+- Theory (30 min): Capabilities of CLI agents. How an agent can create files, folders, and install dependencies (libraries) without your intervention.
+- Practice (90 min): * Giving Claude Code the task: "Create a logic system for my project."
+- Observing how the AI ​​writes code and corrects its errors in real time.
+- Practicing the skill of "dialogue with code": how to request changes to a specific detail.
+- Result: The project gains functionality (buttons start working, data is saved).
 
 ---
 
