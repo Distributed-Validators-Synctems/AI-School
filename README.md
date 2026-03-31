@@ -18,45 +18,56 @@ During the course, we will deploy and configure your development "cockpit":
 
 ---
 
+## 🚀 How to Join
+
+We are currently accepting applications for the live-mentor cohort. To participate:
+1. **Fill out the form:** [Application Form](https://docs.google.com/forms/d/e/1FAIpQLSdMp38aI3-c85Th9urhTiQgR1GIwRGogk275mLLIFJLwdjbHQ/viewform)
+2. **Join the Telegram Group:** [AI School EN](https://t.me/+w-u_9ZLoGzs1OWRi)
+3. **Introduce yourself:** Once you've filled out the form, drop a message in the group!
+
+---
+
 ## Curriculum
 
 ### Module 1: Foundations & Direct Action Tools
 
 #### Session 01: Logging into Vibe-coding and setting up the "Cockpit"
-- Theory (30 min): What is Vibe-coding? Why you no longer need to learn syntax, but logic. Tool overview: why the terminal isn't scary.
-- Hands-on (90 min): * Installing VS Code and extensions.
-- Setting up Claude Code and Antigravity.
-- Creating the first project folder.
-- Command: "Make me a simple web page with my resume and a theme change button."
-- Result: A working local page and a configured environment.
+- Theory (30 min): What is Vibe-coding? Logic over syntax. Tool overview.
+- Hands-on (90 min):
+  - Installing VS Code, Claude Code, and Antigravity.
+  - **Git Baseline:** Initializing your first repo. Why "Save Points" (commits) are your life insurance.
+  - Creating the first project folder.
+  - Command: "Make me a simple resume page with a theme toggle."
+- Result: A working local page, configured environment, and your first commit.
 
-#### Session 02: Generating interfaces "with words"
-- Theory (30 min): How to describe ideas so that AI understands the structure. The difference between "make it beautiful" and "use modern minimalism and a dark theme."
-- Hands-on (90 min): * Working in Bolt.new or Lovable.
-- Creating the structure of a future product (an online store, dashboard, or game).
-- Exporting the code to your workspace for further refinement by agents.
-- Result: A finished visual prototype of the project in the browser.
+#### Session 02: Generating interfaces "with words" & Architectural Choice
+- Theory (30 min): Describing structure vs. "make it pretty." Choosing the "form": SPA, Multi-page, or Chrome Extension?
+- Hands-on (90 min):
+  - Working in Bolt.new or Lovable.
+  - Creating a visual prototype.
+  - Exporting code to the workspace.
+- Result: A finished visual prototype and a clear technical direction.
 
-#### Session 03: Claude Code — AI Hands on Your Computer
-- Theory (30 min): Capabilities of CLI agents. How an agent can create files, folders, and install dependencies (libraries) without your intervention.
-- Practice (90 min): * Giving Claude Code the task: "Create a logic system for my project."
-- Observing how the AI ​​writes code and corrects its errors in real time.
-- Practicing the skill of "dialogue with code": how to request changes to a specific detail.
-- Result: The project gains functionality (buttons start working, data is saved).
+#### Session 03: Claude Code — AI Hands & Iterative Refactoring
+- Theory (30 min): CLI agent capabilities. Managing dependencies.
+- Practice (90 min):
+  - Task: "Build the core logic."
+  - **Refactoring:** Commands for cleanup and optimization. "Dialogue with code": how to fix specific details without breaking everything.
+- Result: Project gains functionality and clean, structured code.
 
 ---
 
 ### Module 2: Professional Skills & Economy
 
-#### Session 04: Token Economy & jcodemunch
-* **Theory:** How context windows work and why "feeding" the AI the entire project is expensive.
-* **Practice:** Using **jcodemunch** to assemble compact context. Setting up `.claudignore`.
-* **Result:** Reducing API costs by 5–10x without sacrificing quality.
+#### Session 04: Token Economy, jcodemunch & Environment Security
+* **Theory:** Context windows, API costs, and `.env` security (Don't leak your keys!).
+* **Practice:** Using **jcodemunch** for compact context. Setting up `.claudignore` and `.env`.
+* **Result:** Reducing costs by 5–10x and keeping your project secure.
 
-#### Session 05: Agent Skills & MCP
-* **Theory:** Model Context Protocol (MCP)—giving AI access to Google, databases, and your files.
-* **Practice:** Connecting external tools. Training the agent to work with real-time web data.
-* **Result:** An agent capable of searching the web and analyzing your local documents.
+#### Session 05: Agent Skills, MCP & Data Schemas
+* **Theory:** MCP (Google, DBs) and **Agent Skills** (Expert roles). Designing "Data Schemas" for agents to follow.
+* **Practice:** Connecting external tools. Teaching the agent to work with real-time data and structured DBs.
+* **Result:** An agent capable of complex research and reliable data handling.
 
 #### Session 06: Orchestration & Agent Teams
 * **Theory:** Agentic engineering. Roles: "Architect," "Executor," "Tester."
@@ -72,18 +83,20 @@ During the course, we will deploy and configure your development "cockpit":
 * **Practice:** Renting a GPU server for $0.30/hr. Deploying **DeepSeek-V3** or **Llama-3**.
 * **Result:** A personal, unlimited AI coder on a remote server.
 
-#### Session 08: AI as a System Administrator
-* **Theory:** Managing servers via SSH without knowing Linux commands.
-* **Practice:** Commanding the agent: "Log into my server, install Docker, and launch my project."
-* **Result:** Your project is published online and accessible via a public link.
+#### Session 08: AI as a System Admin & CI/CD
+* **Theory:** Managing servers via SSH. Concept of **CI/CD** (Automatic updates).
+* **Practice:** "Log into my server, install Docker, set up GitHub Actions for auto-deploy."
+* **Result:** Your project is live and updates automatically on every push.
 
 ---
 
 ### Module 4: Graduation Project
 
-#### Session 09: The Big Build (Intensive)
-* Final assembly of your chosen product (e.g., a game, an AI agent for a validator, or a store).
-* Resolving complex logical bottlenecks under mentor supervision.
+#### Session 09: The Big Build & Feedback Loop
+* Final assembly intensive.
+* **Feedback Loop:** Implementing analytics (PostHog) and iterating based on user data.
+* Resolving logic bottlenecks.
+* **Result:** A functioning "mini-studio" of AI agents running on your machine.
 
 #### Session 10: Polishing & Defense
 * Bug fixing via agent "self-diagnosis."
