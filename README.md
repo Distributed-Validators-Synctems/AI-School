@@ -1,5 +1,7 @@
 # AI School "Conductor": Building IT Products Without Coding Skills
 
+- [For russian-speakers (Для русскоязычных)](https://github.com/Distributed-Validators-Synctems/AI-School/blob/master/README_ru.md)
+
 **Intensive Course: 20 Hours (10 Sessions x 2 Hours)**
 
 This program is designed for those who want to move beyond simply "chatting" with AI and start using it as a full-scale engineering team. We teach **Vibe-coding**—a methodology where you act as the architect and conductor, while autonomous AI agents handle all the technical heavy lifting.
@@ -80,7 +82,7 @@ The requirement for completing the school is a **fully functional product** crea
 
 ---
 
-## 💡 Why It Works
+## Why It Works
 1.  **0% Boring Theory:** We don't teach Python or JavaScript syntax.
 2.  **100% Control:** You learn to manage the tools that write the code for you.
 3.  **Efficiency:** You learn how to spend pennies on tokens where others spend thousands of dollars.
