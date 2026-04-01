@@ -23,7 +23,7 @@
 ## 🚀 Как попасть в ИИ-Школу
 
 Сейчас идет набор в группу обучения с живыми менторами. Чтобы принять участие:
-1. **Заполните анкету:** [Форма заявки](https://docs.google.com/forms/d/e/1FAIpQLSfYQjd5KNzkNbOf-GvqTMMd4QD0bFYuRsvwvF4UgyQEKyuzQ/viewform)
+1. **Заполните анкету:** [Форма заявки](https://forms.gle/bKxhpXLiNzZPRpfw7)
 2. **Вступите в группу Telegram:** [AI School RU](https://t.me/+-J39zeyt-s41MWUy)
 3. **Напишите в чат:** После заполнения анкеты представьтесь в группе и напишите, что форма заполнена.
 
