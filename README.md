@@ -21,7 +21,7 @@ During the course, we will deploy and configure your development "cockpit":
 ## 🚀 How to Join
 
 We are currently accepting applications for the live-mentor cohort. To participate:
-1. **Fill out the form:** [Application Form](https://docs.google.com/forms/d/e/1FAIpQLSdMp38aI3-c85Th9urhTiQgR1GIwRGogk275mLLIFJLwdjbHQ/viewform)
+1. **Fill out the form:** [Application Form](https://forms.gle/R6jPpbNywmYPqLvV9)
 2. **Join the Telegram Group:** [AI School EN](https://t.me/+w-u_9ZLoGzs1OWRi)
 3. **Introduce yourself:** Once you've filled out the form, drop a message in the group!
 
