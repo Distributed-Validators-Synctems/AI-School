@@ -2,7 +2,7 @@
 
 - [For russian-speakers (Для русскоязычных)](https://github.com/Distributed-Validators-Synctems/AI-School/blob/master/README_ru.md)
 
-**Intensive Course: 20 Hours (10 Sessions x 2 Hours)**
+**Intensive Course: 26 Hours (13 Sessions x 2 Hours)**
 
 This program is designed for those who want to move beyond simply "chatting" with AI and start using it as a full-scale engineering team. We teach **Vibe-coding**—a methodology where you act as the architect and conductor, while autonomous AI agents handle all the technical heavy lifting.
 
@@ -31,7 +31,7 @@ We are currently accepting applications for the live-mentor cohort. To participa
 
 ### Module 1: Foundations & Direct Action Tools
 
-#### Session 01: Logging into Vibe-coding and setting up the "Cockpit"
+#### Session 01: Vibe-coding Entry & Cockpit Setup
 - Theory (30 min): What is Vibe-coding? Logic over syntax. Tool overview.
 - Hands-on (90 min):
   - Installing VS Code, Claude Code, and Antigravity.
@@ -40,7 +40,7 @@ We are currently accepting applications for the live-mentor cohort. To participa
   - Command: "Make me a simple resume page with a theme toggle."
 - Result: A working local page, configured environment, and your first commit.
 
-#### Session 02: Generating interfaces "with words" & Architectural Choice
+#### Session 02: Interface Generation "with Words" & Architectural Choice
 - Theory (30 min): Describing structure vs. "make it pretty." Choosing the "form": SPA, Multi-page, or Chrome Extension?
 - Hands-on (90 min):
   - Working in Bolt.new or Lovable.
@@ -57,51 +57,71 @@ We are currently accepting applications for the live-mentor cohort. To participa
 
 ---
 
-### Module 2: Professional Skills & Economy
+### Module 2: AI Fundamentals
 
-#### Session 04: Token Economy, jcodemunch & Environment Security
-* **Theory:** Context windows, API costs, and `.env` security (Don't leak your keys!).
-* **Practice:** Using **jcodemunch** for compact context. Setting up `.claudignore` and `.env`.
+#### Session 04: AI Fundamentals — How LLMs Work
+* **Theory:** Transformer architecture (encoder/decoder). Tokens and Attention mechanism. Context window limits and their impact on workflow.
+* **Practice:** Response generation mechanics (prefill & decode). Token caching and 70–90% cost reduction strategies.
+* **Result:** Understanding how AI "thinks" and how to use that knowledge to work more efficiently.
+
+#### Session 05: AI Fundamentals — Tools, Models & Security
+* **Theory:** Complexity levels: LLMs, Reasoning models, AI agents — when to use each. Context Engineering: why context matters more than prompts. Three knowledge sources: in-context learning, RAG, fine-tuning.
+* **Practice:** Model infrastructure overview: API vs self-hosted, Foundation Models, MCP, Mixture of Experts. AI security: threats and protection methods.
+* **Result:** A clear mental map of the AI landscape and informed model choices for your projects.
+
+---
+
+### Module 3: Professional Skills & Economy
+
+#### Session 06: jcodemunch, .claudignore & Environment Security
+* **Theory:** Applying token knowledge to optimize workflow. Context windows, API costs.
+* **Practice:** Using **jcodemunch** for compact context. Setting up `.claudignore` and `.env` for security (Don't leak your keys!).
 * **Result:** Reducing costs by 5–10x and keeping your project secure.
 
-#### Session 05: Agent Skills, MCP & Data Schemas
-* **Theory:** MCP (Google, DBs) and **Agent Skills** (Expert roles). Designing "Data Schemas" for agents to follow.
-* **Practice:** Connecting external tools. Teaching the agent to work with real-time data and structured DBs.
+#### Session 07: Agent Skills, MCP & Data Schemas
+* **Theory:** MCP (Google, DBs) and **Agent Skills** (Expert roles). Designing "Data Schemas" (JSON/TypeScript interfaces) for agents to follow.
+* **Practice:** Connecting external tools. Installing real skills (e.g., telegram-bot-builder). Teaching the agent to work with real-time data and structured DBs.
 * **Result:** An agent capable of complex research and reliable data handling.
 
-#### Session 06: Orchestration & Agent Teams
-* **Theory:** Agentic engineering. Roles: "Architect," "Executor," "Tester."
-* **Practice:** Running **Antigravity** to coordinate multiple AIs. Automated bug and security checks.
+#### Session 08: Orchestration & Agent Teams
+* **Theory:** Agentic engineering. Roles: "Architect," "Developer," "Tester." Single-agent to multi-agent systems.
+* **Practice:** Running **Antigravity** to coordinate multiple AIs. Automated bug discovery and security checks.
 * **Result:** A functioning "mini-studio" of AI agents running on your machine.
 
 ---
 
-### Module 3: Infrastructure & Freedom
+### Module 4: Infrastructure & Architecture
 
-#### Session 07: Own Servers & Open Source (Infinite Tokens)
-* **Theory:** When APIs become too expensive. Overview of RunPod and Vast.ai.
-* **Practice:** Renting a GPU server for $0.30/hr. Deploying **DeepSeek-V3** or **Llama-3**.
+#### Session 09: Own Servers & Open Source (Infinite Tokens)
+* **Theory:** When APIs become too expensive. Overview of RunPod and Vast.ai. Transition from pay-per-token to hourly GPU rental.
+* **Practice:** Renting a GPU server for $0.30/hr. Deploying **DeepSeek-V3** or **Llama-3**. Teaching agents to use your own server as "Brain."
 * **Result:** A personal, unlimited AI coder on a remote server.
 
-#### Session 08: AI as a System Admin & CI/CD
-* **Theory:** Managing servers via SSH. Concept of **CI/CD** (Automatic updates).
-* **Practice:** "Log into my server, install Docker, set up GitHub Actions for auto-deploy."
+#### Session 10: AI as a System Admin & CI/CD
+* **Theory:** Infrastructure as Code: controlling servers via natural language and SSH. Containerization with Docker (images, containers, volumes).
+* **Practice:** "Log into my server, install Docker, set up GitHub Actions for auto-deploy." Monitoring and self-healing applications.
 * **Result:** Your project is live and updates automatically on every push.
+
+#### Session 11: Software Project Architecture — From Code to Production
+* **Theory:** Project structure: monolith, microservices, monorepo. Deployment environments: dev, staging, production. Testing: unit, integration, E2E.
+* **Practice:** Monitoring & observability: logs, metrics, alerts. Release process: from PR to production.
+* **Result:** Understanding of production-grade architecture and the full release pipeline.
 
 ---
 
-### Module 4: Graduation Project
+### Module 5: Graduation Project
 
-#### Session 09: The Big Build & Feedback Loop
-* Final assembly intensive.
-* **Feedback Loop:** Implementing analytics (PostHog) and iterating based on user data.
-* Resolving logic bottlenecks.
-* **Result:** A functioning "mini-studio" of AI agents running on your machine.
+#### Session 12: The Big Build & Feedback Loop
+* Final assembly intensive: combining UI, logic, and infrastructure.
+* **Observability:** Adding analytics (PostHog) and error tracking (Sentry).
+* **The Human Loop:** Testing with 3 real users and collecting feedback. Teaching agent to "Pivot" based on user complaints.
+* **Result:** A complete product with real-world feedback integration.
 
-#### Session 10: Polishing & Defense
-* Bug fixing via agent "self-diagnosis."
-* Final product demonstration.
-* **Result:** Graduation with a fully functional application and the skills to build any IT project in the future.
+#### Session 13: Polishing, Defense & Going Public
+* **The Final Polish:** Fixing UI inconsistencies and optimizing assets.
+* **The Pitch:** Perfecting a 3-minute project presentation.
+* **The Defense:** Answering technical questions on architecture and AI's role.
+* **Result:** Graduation with a fully functional application, digital certificate, and the skills to build any IT project in the future.
 
 ---
 
