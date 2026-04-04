@@ -12,7 +12,7 @@ This program is designed for those who want to move beyond simply "chatting" wit
 During the course, we will deploy and configure your development "cockpit":
 * **Orchestrators:** Antigravity, Claude Code (CLI).
 * **Environment:** VS Code + Windsurf / Cursor.
-* **Optimization:** jcodemunch, MCP (Model Context Protocol).
+* **Optimization:** MCP (Model Context Protocol).
 * **Infrastructure:** RunPod, Vast.ai (GPU rental), Docker.
 * **Interfaces:** Bolt.new, Lovable.
 
@@ -48,7 +48,12 @@ We are currently accepting applications for the live-mentor cohort. To participa
   - Exporting code to the workspace.
 - Result: A finished visual prototype and a clear technical direction.
 
-#### Session 03: Claude Code — AI Hands & Iterative Refactoring
+#### Session 03: Professional Tooling — MCP & Agent Skills
+* **Theory:** Applying token knowledge to optimize workflow. MCP (Google, DBs) and **Agent Skills** (Expert roles). Designing "Data Schemas" (JSON/TypeScript interfaces) for agents.
+* **Practice:** Using compact context. Setting up `.claudignore` and `.env` for security. Connecting external tools via MCP. Installing real skills (e.g., telegram-bot-builder).
+* **Result:** Reducing costs by 5–10x, secure environment, and an agent with expert capabilities.
+
+#### Session 04: Claude Code — AI Hands & Iterative Refactoring
 - Theory (30 min): CLI agent capabilities. Managing dependencies.
 - Practice (90 min):
   - Task: "Build the core logic."
@@ -59,7 +64,7 @@ We are currently accepting applications for the live-mentor cohort. To participa
 
 ### Module 2: AI Fundamentals
 
-#### Session 04: AI Fundamentals — How Models Work, Context & Security
+#### Session 05: AI Fundamentals — How Models Work, Context & Security
 * **Theory:** Transformer architecture, tokens and Attention mechanism. Context window limits, token economics, and caching (70–90% cost savings). Three levels of AI: LLMs, Reasoning models, Agents. Context Engineering: why context matters more than prompts. Three knowledge sources: in-context learning, RAG, fine-tuning.
 * **Practice:** AI security: prompt injection, jailbreaking, data leakage. OWASP Top 10 for LLM. API vs self-hosted model overview.
 * **Result:** A clear mental map of the AI landscape, cost optimization strategies, and security awareness.
@@ -67,11 +72,6 @@ We are currently accepting applications for the live-mentor cohort. To participa
 ---
 
 ### Module 3: Professional Skills & Economy
-
-#### Session 05: Professional Tooling — jcodemunch, MCP & Agent Skills
-* **Theory:** Applying token knowledge to optimize workflow. MCP (Google, DBs) and **Agent Skills** (Expert roles). Designing "Data Schemas" (JSON/TypeScript interfaces) for agents.
-* **Practice:** Using **jcodemunch** for compact context. Setting up `.claudignore` and `.env` for security. Connecting external tools via MCP. Installing real skills (e.g., telegram-bot-builder).
-* **Result:** Reducing costs by 5–10x, secure environment, and an agent with expert capabilities.
 
 #### Session 06: Orchestration & Agent Teams
 * **Theory:** Agentic engineering. Roles: "Architect," "Developer," "Tester." Single-agent to multi-agent systems.
