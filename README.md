@@ -31,7 +31,7 @@ We are currently accepting applications for the live-mentor cohort. To participa
 
 ### Module 1: Foundations & Direct Action Tools
 
-#### Session 01: Logging into Vibe-coding and setting up the "Cockpit"
+#### Session 01: Vibe-coding Entry & Cockpit Setup
 - Theory (30 min): What is Vibe-coding? Logic over syntax. Tool overview.
 - Hands-on (90 min):
   - Installing VS Code, Claude Code, and Antigravity.
@@ -40,7 +40,7 @@ We are currently accepting applications for the live-mentor cohort. To participa
   - Command: "Make me a simple resume page with a theme toggle."
 - Result: A working local page, configured environment, and your first commit.
 
-#### Session 02: Generating interfaces "with words" & Architectural Choice
+#### Session 02: Interface Generation "with Words" & Architectural Choice
 - Theory (30 min): Describing structure vs. "make it pretty." Choosing the "form": SPA, Multi-page, or Chrome Extension?
 - Hands-on (90 min):
   - Working in Bolt.new or Lovable.
@@ -57,51 +57,55 @@ We are currently accepting applications for the live-mentor cohort. To participa
 
 ---
 
-### Module 2: Professional Skills & Economy
+### Module 2: AI Fundamentals
 
-#### Session 04: Token Economy, jcodemunch & Environment Security
-* **Theory:** Context windows, API costs, and `.env` security (Don't leak your keys!).
-* **Practice:** Using **jcodemunch** for compact context. Setting up `.claudignore` and `.env`.
-* **Result:** Reducing costs by 5–10x and keeping your project secure.
+#### Session 04: AI Fundamentals — How Models Work, Context & Security
+* **Theory:** Transformer architecture, tokens and Attention mechanism. Context window limits, token economics, and caching (70–90% cost savings). Three levels of AI: LLMs, Reasoning models, Agents. Context Engineering: why context matters more than prompts. Three knowledge sources: in-context learning, RAG, fine-tuning.
+* **Practice:** AI security: prompt injection, jailbreaking, data leakage. OWASP Top 10 for LLM. API vs self-hosted model overview.
+* **Result:** A clear mental map of the AI landscape, cost optimization strategies, and security awareness.
 
-#### Session 05: Agent Skills, MCP & Data Schemas
-* **Theory:** MCP (Google, DBs) and **Agent Skills** (Expert roles). Designing "Data Schemas" for agents to follow.
-* **Practice:** Connecting external tools. Teaching the agent to work with real-time data and structured DBs.
-* **Result:** An agent capable of complex research and reliable data handling.
+---
+
+### Module 3: Professional Skills & Economy
+
+#### Session 05: Professional Tooling — jcodemunch, MCP & Agent Skills
+* **Theory:** Applying token knowledge to optimize workflow. MCP (Google, DBs) and **Agent Skills** (Expert roles). Designing "Data Schemas" (JSON/TypeScript interfaces) for agents.
+* **Practice:** Using **jcodemunch** for compact context. Setting up `.claudignore` and `.env` for security. Connecting external tools via MCP. Installing real skills (e.g., telegram-bot-builder).
+* **Result:** Reducing costs by 5–10x, secure environment, and an agent with expert capabilities.
 
 #### Session 06: Orchestration & Agent Teams
-* **Theory:** Agentic engineering. Roles: "Architect," "Executor," "Tester."
-* **Practice:** Running **Antigravity** to coordinate multiple AIs. Automated bug and security checks.
+* **Theory:** Agentic engineering. Roles: "Architect," "Developer," "Tester." Single-agent to multi-agent systems.
+* **Practice:** Running **Antigravity** to coordinate multiple AIs. Automated bug discovery and security checks.
 * **Result:** A functioning "mini-studio" of AI agents running on your machine.
 
 ---
 
-### Module 3: Infrastructure & Freedom
+### Module 4: Infrastructure & Architecture
 
 #### Session 07: Own Servers & Open Source (Infinite Tokens)
-* **Theory:** When APIs become too expensive. Overview of RunPod and Vast.ai.
-* **Practice:** Renting a GPU server for $0.30/hr. Deploying **DeepSeek-V3** or **Llama-3**.
+* **Theory:** When APIs become too expensive. Overview of RunPod and Vast.ai. Transition from pay-per-token to hourly GPU rental.
+* **Practice:** Renting a GPU server for $0.30/hr. Deploying **DeepSeek-V3** or **Llama-3**. Teaching agents to use your own server as "Brain."
 * **Result:** A personal, unlimited AI coder on a remote server.
 
 #### Session 08: AI as a System Admin & CI/CD
-* **Theory:** Managing servers via SSH. Concept of **CI/CD** (Automatic updates).
-* **Practice:** "Log into my server, install Docker, set up GitHub Actions for auto-deploy."
+* **Theory:** Infrastructure as Code: controlling servers via natural language and SSH. Containerization with Docker (images, containers, volumes).
+* **Practice:** "Log into my server, install Docker, set up GitHub Actions for auto-deploy." Monitoring and self-healing applications.
 * **Result:** Your project is live and updates automatically on every push.
+
+#### Session 09: Software Project Architecture — From Code to Production
+* **Theory:** Project structure: monolith, microservices, monorepo. Deployment environments: dev, staging, production. Testing: unit, integration, E2E.
+* **Practice:** Monitoring & observability: logs, metrics, alerts. Release process: from PR to production.
+* **Result:** Understanding of production-grade architecture and the full release pipeline.
 
 ---
 
-### Module 4: Graduation Project
+### Module 5: Graduation Project
 
-#### Session 09: The Big Build & Feedback Loop
-* Final assembly intensive.
-* **Feedback Loop:** Implementing analytics (PostHog) and iterating based on user data.
-* Resolving logic bottlenecks.
-* **Result:** A functioning "mini-studio" of AI agents running on your machine.
-
-#### Session 10: Polishing & Defense
-* Bug fixing via agent "self-diagnosis."
-* Final product demonstration.
-* **Result:** Graduation with a fully functional application and the skills to build any IT project in the future.
+#### Session 10: Graduation — Build, Defense & Going Public
+* Final assembly: combining UI, logic, and infrastructure. Adding analytics (PostHog) and error tracking (Sentry).
+* **Peer Testing:** Testing each other's projects and collecting feedback. Quick fixes with AI agents.
+* **The Pitch:** 3-minute project presentation. **The Defense:** Technical Q&A on architecture and AI's role.
+* **Result:** Graduation with a fully functional application, digital certificate, and the skills to build any IT project in the future.
 
 ---
 
