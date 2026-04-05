@@ -34,7 +34,7 @@ We are currently accepting applications for the live-mentor cohort. To participa
 #### Session 01: Vibe-coding Entry & Cockpit Setup
 - Theory (30 min): What is Vibe-coding? Logic over syntax. Tool overview.
 - Hands-on (90 min):
-  - Installing VS Code, Claude Code, and Antigravity.
+  - Installing Antigravity.
   - **Git Baseline:** Initializing your first repo. Why "Save Points" (commits) are your life insurance.
   - Creating the first project folder.
   - Command: "Make me a simple resume page with a theme toggle."
