@@ -4,6 +4,8 @@
 
 - [Презентация](https://docs.google.com/presentation/d/1T4AVKL4MEWM99WC289ogJEEH-4tcSTCuX5ZL5yFveks/edit?usp=sharing)
 
+- [Часто-Задаваемые Вопросы](https://github.com/Distributed-Validators-Synctems/AI-School/blob/master/FAQ_ru.md)
+
 **Интенсивный курс: 20 часов (10 занятий по 2 часа)**
 
 Эта программа создана для тех, кто хочет перестать просто «чатиться» с ИИ и начать использовать ИИ для создания команды ИИ-Агентов, которые будут выполнять любые ваши запросы. 
