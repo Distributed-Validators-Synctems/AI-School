@@ -1,10 +1,16 @@
-# AI School "Conductor": Building IT Products Without Coding Skills
+# AI School "Conductor": Building IT Products Without Programming Skills
 
-- [For russian-speakers (Для русскоязычных)](https://github.com/Distributed-Validators-Synctems/AI-School/blob/master/README_ru.md)
+- [For Russian speakers (Для русскоязычных)](https://github.com/Distributed-Validators-Synctems/AI-School/blob/master/README_ru.md)
 
-**Intensive Course: 20 Hours (10 Sessions x 2 Hours)**
+- [Presentation](https://docs.google.com/presentation/d/1T4AVKL4MEWM99WC289ogJEEH-4tcSTCuX5ZL5yFveks/edit?usp=sharing)
 
-This program is designed for those who want to move beyond simply "chatting" with AI and start using it as a full-scale engineering team. We teach **Vibe-coding**—a methodology where you act as the architect and conductor, while autonomous AI agents handle all the technical heavy lifting.
+- [Frequently Asked Questions](https://github.com/Distributed-Validators-Synctems/AI-School/blob/master/FAQ.md)
+
+**Intensive course: 20 hours (10 sessions of 2 hours each)**
+
+This program is built for people who want to stop merely "chatting" with AI and start using AI to create a team of AI agents that can execute any of your requests.
+
+We teach **Agentic Engineering** and **Agentic Orchestration** - methodologies where you act as the Conductor (the person managing the company), while autonomous AI agents handle all technical work and marketing.
 
 ---
 
@@ -19,98 +25,117 @@ We are currently accepting applications for the live-mentor cohort. To participa
 
 ## Curriculum
 
-### Module 1: Foundations & Direct Action Tools
+#### Session 01: Introduction to Vibe Coding and AI + IDE + GitHub Setup
+- Theory (10 min): What is Vibe Coding? Logic is more important than syntax. Tool overview.
+- Practice (110 min):
+  - IDE with an AI assistant
+  - Git installation
+  - **Git Baseline:** Initializing your first repository. Why "save points" (commits) are your safety net
+  - Creating your first project folder
+  - Creating your first project
+- Result: A working local page, configured environment, first commit, and first project
 
-#### Session 01: Vibe-coding Entry & Cockpit Setup
-- Theory (30 min): What is Vibe-coding? Logic over syntax. Tool overview.
-- Hands-on (90 min):
-  - Installing Antigravity.
-  - **Git Baseline:** Initializing your first repo. Why "Save Points" (commits) are your life insurance.
-  - Creating the first project folder.
-  - Command: "Make me a simple resume page with a theme toggle."
-- Result: A working local page, configured environment, and your first commit.
+#### Session 02: Free Tokens, Token Savings, Rules and Instructions for AI
+- Theory (10 min): What tokens are, where to get them, and how to save them; what context is and how to avoid overflowing it
+- Practice (110 min):
+  - Free access to models
+  - API keys and API endpoints
+  - Integrating keys into the IDE
+  - Context optimization
+  - A minimal required set of rules and instructions for AI
+- Result: Unlimited access to previous-generation and latest AI models, with 80% to 99% savings on paid-model tokens
 
-#### Session 02: Interface Generation "with Words" & Architectural Choice
-- Theory (30 min): Describing structure vs. "make it pretty." Choosing the "form": SPA, Multi-page, or Chrome Extension?
-- Hands-on (90 min):
-  - Working in Bolt.new or Lovable.
-  - Creating a visual prototype.
-  - Exporting code to the workspace.
-- Result: A finished visual prototype and a clear technical direction.
+#### Session 03: Prompt Engineering: Architecture + Specification + Plan
+- Theory (10 min): Describing structure vs. "make it beautiful." How do you understand what to create?
+- Practice (110 min):
+  - Choosing a project (with AI)
+  - Creating the project architecture (with AI)
+  - Creating the project specification (with AI)
+  - Creating the development plan (with AI)
+  - Creating a visual prototype (with AI)
+  - Exporting code into the working environment (with AI)
+- Result: A finished visual prototype and a clear technical description for further development by a team of AI agents
 
-#### Session 03: Professional Tooling — MCP & Agent Skills
-* **Theory:** Applying token knowledge to optimize workflow. MCP (Google, DBs) and **Agent Skills** (Expert roles). Designing "Data Schemas" (JSON/TypeScript interfaces) for agents.
-* **Practice:** Using compact context. Setting up `.claudignore` and `.env` for security. Connecting external tools via MCP. Installing real skills (e.g., telegram-bot-builder).
-* **Result:** Reducing costs by 5–10x, secure environment, and an agent with expert capabilities.
+#### Session 04: Development with a Team of AI Agents: MCP + Skills
+- Theory (10 min): AI agent roles, what MCP and Skills are, and why they are needed
+- Practice (110 min):
+  - Installing the required MCPs (with AI)
+  - Installing the required Skills (with AI)
+  - Assigning roles to AI agents (with AI)
+  - Launching a team of AI agents and developing a product (with AI)
+- Result: A personal team of AI agents ready to start executing any task you give them
 
-#### Session 04: Claude Code — AI Hands & Iterative Refactoring
-- Theory (30 min): CLI agent capabilities. Managing dependencies.
-- Practice (90 min):
-  - Task: "Build the core logic."
-  - **Refactoring:** Commands for cleanup and optimization. "Dialogue with code": how to fix specific details without breaking everything.
-- Result: Project gains functionality and clean, structured code.
+#### Session 05: Memory for Your AI Agents: LLM Wiki
+- Theory (10 min): Why AI agents need memory and Andrej Karpathy's method
+- Practice (110 min):
+  - Launching memory storage on your own device
+  - Creating an LLM wiki (with AI)
+  - Configuring the memory compiler (with AI)
+  - Connecting an AI agent to the "second brain" (with AI)
+  - Integrating the "second brain" into any other projects
+- Result: Your AI agents do not forget anything, save context, and automatically update your "second brain"
+
+#### Session 06: Databases + Authentication
+- Theory (10 min): What kinds of databases exist and why they are needed
+- Practice (110 min):
+  - Choosing a suitable database (DB)
+  - Creating the DB (with AI)
+  - Configuring the DB (with AI)
+  - Setting up authentication for users
+  - Integrating the DB into your project (with AI)
+- Result: You get a database that stores information about your users, and your users can connect to your product using email or any other accounts
+
+#### Session 07: Launching Your Own AI Agents / Alternatives to OpenClaw
+- Theory (10 min): What autonomous AI agents can do, and how and where they can be used
+- Practice (110 min):
+  - Creating and deploying an AI agent (with AI)
+  - Connecting an LLM to the AI agent
+  - Connecting the AI agent to Telegram
+  - Giving the AI agent a routine (with AI)
+  - Giving the AI agent its first tasks
+- Result: You get a personal AI agent with its own specification for completing specific tasks, and you communicate with it through Telegram
+
+#### Session 08: Deploying Your Product
+- Theory (10 min): What production deployment is and where to host your product
+- Practice (110 min):
+  - Deploying a web application (with AI)
+  - Choosing hosting
+  - Choosing a domain
+  - Setting up CI/CD automation (with AI)
+  - Creating an APK (with AI)
+  - Preparing deployment to Google Play and the App Store
+- Result: Your product is available to users through an HTTPS URL or as an APK file
+
+#### Session 09: AI Marketing
+- Theory (10 min): Why marketing agents are needed and how to structure a marketing team
+- Practice (110 min):
+  - Setting up Skills for marketing agents (with AI)
+  - Getting API keys from social networks
+  - Setting up SEO tools (with AI)
+  - Setting up market research tools (with AI)
+  - Launching a team of AI marketers on a server (with AI)
+- Result: You get a team of AI marketers that will automatically create content and collect feedback
+
+#### Session 10: Product Presentation - Graduation Project
+- Theory (10 min): How to prepare your product presentation and pitch
+- Practice (60 min):
+  - Creating a description of your product (with AI)
+  - Creating a presentation (with AI)
+  - Creating a video overview for your project (with AI)
+  - Preparing a product pitch (with AI)
+  - Preparing answers to questions (with AI)
+- Graduation (50 min):
+  - Presenting your project (either independently or with AI)
+- Result: You will have your own working product with a finished presentation, which you can use yourself, sell to third parties, or submit for a grant
 
 ---
 
-### Module 2: AI Fundamentals
-
-#### Session 05: AI Fundamentals — How Models Work, Context & Security
-* **Theory:** Transformer architecture, tokens and Attention mechanism. Context window limits, token economics, and caching (70–90% cost savings). Three levels of AI: LLMs, Reasoning models, Agents. Context Engineering: why context matters more than prompts. Three knowledge sources: in-context learning, RAG, fine-tuning.
-* **Practice:** AI security: prompt injection, jailbreaking, data leakage. OWASP Top 10 for LLM. API vs self-hosted model overview.
-* **Result:** A clear mental map of the AI landscape, cost optimization strategies, and security awareness.
-
----
-
-### Module 3: Professional Skills & Economy
-
-#### Session 06: Orchestration & Agent Teams
-* **Theory:** Agentic engineering. Roles: "Architect," "Developer," "Tester." Single-agent to multi-agent systems.
-* **Practice:** Running **Antigravity** to coordinate multiple AIs. Automated bug discovery and security checks.
-* **Result:** A functioning "mini-studio" of AI agents running on your machine.
-
----
-
-### Module 4: Infrastructure & Architecture
-
-#### Session 07: Own Servers & Open Source (Infinite Tokens)
-* **Theory:** When APIs become too expensive. Overview of RunPod and Vast.ai. Transition from pay-per-token to hourly GPU rental.
-* **Practice:** Renting a GPU server for $0.30/hr. Deploying **DeepSeek-V3** or **Llama-3**. Teaching agents to use your own server as "Brain."
-* **Result:** A personal, unlimited AI coder on a remote server.
-
-#### Session 08: AI as a System Admin & CI/CD
-* **Theory:** Infrastructure as Code: controlling servers via natural language and SSH. Containerization with Docker (images, containers, volumes).
-* **Practice:** "Log into my server, install Docker, set up GitHub Actions for auto-deploy." Monitoring and self-healing applications.
-* **Result:** Your project is live and updates automatically on every push.
-
-#### Session 09: Software Project Architecture — From Code to Production
-* **Theory:** Project structure: monolith, microservices, monorepo. Deployment environments: dev, staging, production. Testing: unit, integration, E2E.
-* **Practice:** Monitoring & observability: logs, metrics, alerts. Release process: from PR to production.
-* **Result:** Understanding of production-grade architecture and the full release pipeline.
-
----
-
-### Module 5: Graduation Project
-
-#### Session 10: Graduation — Build, Defense & Going Public
-* Final assembly: combining UI, logic, and infrastructure. Adding analytics (PostHog) and error tracking (Sentry).
-* **Peer Testing:** Testing each other's projects and collecting feedback. Quick fixes with AI agents.
-* **The Pitch:** 3-minute project presentation. **The Defense:** Technical Q&A on architecture and AI's role.
-* **Result:** Graduation with a fully functional application, digital certificate, and the skills to build any IT project in the future.
-
----
-
-## Graduation Project
-The requirement for completing the school is a **fully functional product** created independently using AI agents. 
-> **Note:** Mentors support you until a successful submission. If the project isn't working, the mentor provides additional consultations until the goal is reached.
-
----
-
-## Why It Works
-1.  **0% Boring Theory:** We don't teach Python or JavaScript syntax.
-2.  **100% Control:** You learn to manage the tools that write the code for you.
-3.  **Efficiency:** You learn how to spend pennies on tokens where others spend thousands of dollars.
-4.  **Calendar-based and group training:** You'll have additional responsibility, which will prevent you from procrastinating.
-5.  **Real results:** The training won't end until you create a real product that you can sell or use yourself.
+## Why Study at AI School?
+1.  **0% boring theory:** We do not teach Python or JavaScript syntax.
+2.  **100% control:** You learn to manage the tools that write code for you.
+3.  **Efficiency:** You learn how to spend pennies on tokens where others spend thousands.
+4.  **Calendar-based group training:** You take on additional accountability, which helps you avoid procrastination.
+5.  **Real result:** Training does not end until you create a real product that you can sell or use yourself.
 
 ---
 *Built for those who want to build the future, not just watch it happen.*
