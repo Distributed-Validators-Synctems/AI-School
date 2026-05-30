@@ -8,16 +8,6 @@ This program is designed for those who want to move beyond simply "chatting" wit
 
 ---
 
-## Tool Stack
-During the course, we will deploy and configure your development "cockpit":
-* **Orchestrators:** Antigravity, Claude Code (CLI).
-* **Environment:** VS Code + Windsurf / Cursor.
-* **Optimization:** MCP (Model Context Protocol).
-* **Infrastructure:** RunPod, Vast.ai (GPU rental), Docker.
-* **Interfaces:** Bolt.new, Lovable.
-
----
-
 ## 🚀 How to Join
 
 We are currently accepting applications for the live-mentor cohort. To participate:
