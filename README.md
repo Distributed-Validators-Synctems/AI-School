@@ -1,5 +1,6 @@
 # AI School "Conductor": Building IT Products Without Programming Skills
 
+- [For Spanish speakers (Para hispanohablantes)](https://github.com/Distributed-Validators-Synctems/AI-School/blob/master/README_es.md)
 - [For Russian speakers (Для русскоязычных)](https://github.com/Distributed-Validators-Synctems/AI-School/blob/master/README_ru.md)
 
 - [Presentation](https://docs.google.com/presentation/d/1T4AVKL4MEWM99WC289ogJEEH-4tcSTCuX5ZL5yFveks/edit?usp=sharing)
