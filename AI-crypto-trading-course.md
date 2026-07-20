@@ -9,7 +9,7 @@ updated: 2026-06-26
 
 # Искусственный Интеллект для торговли криптой
 
-## О чём эта презентация
+## О чём этот курс
 
 Как построить систему ИИ-агентов, которая торгует криптовалютой на децентрализованных биржах (Uniswap на Base), анализирует рынок в реальном времени, адаптирует стратегии под изменяющиеся условия, и при этом не сливает депозит. Всё — с открытым исходным кодом, на своих серверах, без посредников.
 
@@ -283,25 +283,7 @@ RULES:
     └── LLM Wiki (журнал + анализ)
 ```
 
-**С чего начать прямо сейчас:**
-1. Поднять Hummingbot на сервере и запустить paper trading с готовой стратегией
-2. Написать On-Chain Agent, который читает данные из Uniswap V3 пулов через Alchemy
-3. Подключить Market Data Agent (CoinGecko бесплатный API)
-4. Запустить связку из двух агентов на бумажной торговле
-5. Когда бумажная торговля стабильно в плюсе 2+ недели — минимальный реальный депозит
-
 ---
 
 ## Связанные материалы
 
-- [[off-line-lesson-01]] — GitHub, Zed, DeepSeek & Context Optimization
-- [[off-line-lesson-02]] — Architecture, Design & AI Agent Team
-- [[off-line-lesson-03]] — Deployment & Databases (fly.io, SupaBase, own server)
-- [[off-line-lesson-04]] — Autonomous AI Agent with Memory
-- [[off-line-lesson-05]] — AI Marketing Team
-- [[off-line-lesson-06]] — Diploma Project
-- [[lesson-04-ai-agents-team]] — Команда ИИ-агентов
-- [[lesson-05-llm-wiki]] — LLM Wiki, второй мозг
-- [[lesson-06-database]] — База данных
-- [[lesson-08-production-deployment]] — Деплой в production
-- [[guide-agent-skills-installation]] — Установка и использование Agent Skills
