@@ -1,6 +1,9 @@
 # AI School "Conductor": Building IT Products Without Coding Skills
 
-- [For russian-speakers (Для русскоязычных)](https://github.com/Distributed-Validators-Synctems/AI-School/blob/master/README_ru.md)
+- [For Spanish speakers (Para hispanohablantes)](https://github.com/Distributed-Validators-Synctems/AI-School/blob/master/README_es.md)
+- [For Russian speakers (Для русскоязычных)](https://github.com/Distributed-Validators-Synctems/AI-School/blob/master/README_ru.md)
+
+- [Frequently Asked Questions](https://github.com/Distributed-Validators-Synctems/AI-School/blob/master/FAQ.md)
 
 **Intensive Course: 20 Hours (10 Sessions x 2 Hours)**
 
