@@ -1,10 +1,7 @@
 ---
 title: "Искусственный Интеллект для торговли криптой"
-type: synthesis
 difficulty: advanced
 tags: [ai, crypto, trading, ethereum, base, uniswap, hummingbot, agents, rpc, onchain]
-created: 2026-06-26
-updated: 2026-06-26
 ---
 
 # Искусственный Интеллект для торговли криптой
