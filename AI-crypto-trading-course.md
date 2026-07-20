@@ -6,6 +6,8 @@
 
 Подробнее, о том что надо чтобы [Искусственный Интеллект торговл криптой](https://github.com/Distributed-Validators-Synctems/AI-School/blob/master/AI-crypto-trading.md)
 
+[По поводу оплаты и другие часто-задаваемые вопросы](https://github.com/Distributed-Validators-Synctems/AI-School/blob/master/FAQ_ru.md)
+
 ## Как записаться на курс в ИИ-Школу
 
 Сейчас идет набор в группу обучения с живыми менторами. Чтобы принять участие:
