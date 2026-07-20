@@ -1,0 +1,6 @@
+# AI School local excludes
+mentor_guides/
+.mentor_guides/
+node_modules/
+.env
+.DS_Store
