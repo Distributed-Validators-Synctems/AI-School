@@ -18,7 +18,7 @@ Enseñamos **Ingeniería Agentiva** y **Orquestación Agentiva** — metodologí
 ## 🚀 Cómo Unirse
 
 Estamos aceptando solicitudes para la cohorte con mentor en vivo. Para participar:
-1. **Completa el formulario:** [Formulario de Solicitud](https://forms.gle/R6jPpbNywmYPqLvV9)
+1. **Completa el formulario:** [Formulario de Solicitud](https://forms.gle/3VPTwcWD9FV5NcCF7)
 2. **Únete al grupo de Telegram:** [AI School ES](https://t.me/NovicIAdoSchool)
 3. **Preséntate:** ¡Una vez que hayas completado el formulario, escribe un mensaje en el grupo!
 
