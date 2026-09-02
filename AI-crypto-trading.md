@@ -1,254 +1,254 @@
 ---
-title: "Искусственный Интеллект для торговли криптой"
+title: "Artificial Intelligence for Crypto Trading"
 difficulty: advanced
 tags: [ai, crypto, trading, ethereum, base, uniswap, hummingbot, agents, rpc, onchain]
 ---
 
-# Искусственный Интеллект для торговли криптой
+# Artificial Intelligence for Crypto Trading
 
-Как построить систему ИИ-агентов, которая торгует криптовалютой на децентрализованных биржах (Uniswap на Base), анализирует рынок в реальном времени, адаптирует стратегии под изменяющиеся условия, и при этом не сливает депозит. Всё — с открытым исходным кодом, на своих серверах, без посредников.
+How to build a system of AI agents that trades cryptocurrency on decentralized exchanges (Uniswap on Base), analyzes the market in real time, adapts strategies to changing conditions, and doesn't drain the deposit in the process. All of it open-source, running on your own servers, with no intermediaries.
 
 ---
 
-## 1. Почему «просто взять и написать ИИ-агента» — недостаточно
+## 1. Why "just tell an AI to trade crypto" is not enough
 
-Новичок думает: *«Скажу ChatGPT "торгуй криптой" — и готово».* Реальность сложнее.
+A beginner thinks: *"I'll tell ChatGPT to 'trade crypto' — and that's it."* Reality is more complicated.
 
-ИИ-агенту для торговли на DEX нужно **четыре источника данных**, и каждый требует отдельной инфраструктуры:
+An AI agent trading on a DEX needs **four data sources**, and each one requires its own infrastructure:
 
-| Источник | Что даёт | Как получить |
+| Source | What it gives you | How to get it |
 |----------|----------|--------------|
-| **On-chain данные** | Балансы, пулы ликвидности, курсы токенов, история свопов | Поднять свою RPC-ноду (Ethereum / Base) или использовать провайдера |
-| **Рыночные данные** | Цены с CEX (Binance, Coinbase), объёмы, волатильность, настроения | API бирж + агрегаторы (CoinGecko, DefiLlama) |
-| **Социальные сигналы** | Twitter, Discord, Telegram проекта — анонсы, хайп, FUD | Парсинг + sentiment analysis |
-| **Исторические данные** | Бэктестинг стратегий на прошлых данных | Dune Analytics, The Graph, собственное хранилище |
+| **On-chain data** | Balances, liquidity pools, token prices, swap history | Run your own RPC node (Ethereum / Base) or use a provider |
+| **Market data** | Prices from CEXes (Binance, Coinbase), volumes, volatility, sentiment | Exchange APIs + aggregators (CoinGecko, DefiLlama) |
+| **Social signals** | Twitter, Discord, Telegram of the project — announcements, hype, FUD | Scraping + sentiment analysis |
+| **Historical data** | Backtesting strategies on past data | Dune Analytics, The Graph, your own storage |
 
-**Пример на Base + Uniswap V3:**
-- Нужна RPC-нода Base (L2 Ethereum) — чтобы читать контракты Uniswap, пулы, свопы
-- Нужен провайдер RPC  — поднять свою ноду Base дорого, какие есть альтернативы?
-- Нужно понимать ABI контрактов Uniswap V3 (Router, Factory, Quoter, Position Manager)
-- Нужен `ethers.js` или `viem` для отправки транзакций
+**An example on Base + Uniswap V3:**
+- You need a Base RPC node (an Ethereum L2) — to read Uniswap contracts, pools, swaps
+- You need an RPC provider — running your own Base node is expensive, what are the alternatives?
+- You need to understand the ABI of the Uniswap V3 contracts (Router, Factory, Quoter, Position Manager)
+- You need `ethers.js` or `viem` to send transactions
 
-**Вывод:** агент без доступа к блокчейну — слепой. Агент без доступа к рынку — глухой. Нужна экосистема агентов, каждый со своим доступом к данным.
+**Takeaway:** an agent without blockchain access is blind. An agent without market access is deaf. You need an ecosystem of agents, each with its own data access.
 
 ---
 
-## 2. Архитектура: как это работает
+## 2. Architecture: how it works
 
-В центре системы — цепочка ИИ-агентов, где каждый получает данные, обрабатывает и передаёт результат следующему. Ниже — упрощённая схема этого конвейера:
+At the center of the system is a chain of AI agents, where each one receives data, processes it, and passes the result to the next. Below is a simplified diagram of this pipeline:
 
 ```mermaid
 flowchart LR
     RPC["RPC Node<br/>(Base L2)"]
-    CEX["Рыночные данные<br/>(CEX API)"]
-    SOCIAL["Соцсети<br/>(Twitter/Discord)"]
+    CEX["Market data<br/>(CEX API)"]
+    SOCIAL["Social media<br/>(Twitter/Discord)"]
 
-    A1["ИИ-Агент 1<br/>Читает ончейн:<br/>пулы, балансы,<br/>крупные свопы"]
-    A2["ИИ-Агент 2<br/>Собирает цены,<br/>объёмы, тренды"]
-    A3["ИИ-Агент 3<br/>Анализирует новости,<br/>хайп, настроения"]
+    A1["AI Agent 1<br/>Reads on-chain:<br/>pools, balances,<br/>large swaps"]
+    A2["AI Agent 2<br/>Collects prices,<br/>volumes, trends"]
+    A3["AI Agent 3<br/>Analyzes news,<br/>hype, sentiment"]
 
-    A4["ИИ-Агент 4<br/>Сводит сигналы<br/>от A1, A2, A3<br/>→ выбирает стратегию"]
-    A5["ИИ-Агент 5<br/>Проверяет риск:<br/>размер позиции,<br/>стоп-лосс"]
+    A4["AI Agent 4<br/>Combines signals<br/>from A1, A2, A3<br/>→ picks a strategy"]
+    A5["AI Agent 5<br/>Checks risk:<br/>position size,<br/>stop-loss"]
 
-    EXEC["Hummingbot<br/>Исполняет ордер<br/>на Uniswap"]
+    EXEC["Hummingbot<br/>Executes the order<br/>on Uniswap"]
 
     RPC --> A1
     CEX --> A2
     SOCIAL --> A3
 
-    A1 -->|"сигналы ончейн"| A4
-    A2 -->|"сигналы рынок"| A4
-    A3 -->|"сигналы сентимент"| A4
+    A1 -->|"on-chain signals"| A4
+    A2 -->|"market signals"| A4
+    A3 -->|"sentiment signals"| A4
 
-    A4 -->|"выбранная стратегия"| A5
-    A5 -->|"ордер + лимиты"| EXEC
+    A4 -->|"chosen strategy"| A5
+    A5 -->|"order + limits"| EXEC
 ```
 
-**Как читать схему:**
+**How to read the diagram:**
 
-1. **Данные заходят** — RPC-нода, биржи, соцсети поставляют сырые данные трём агентам-аналитикам (A1, A2, A3)
-2. **Анализ** — каждый агент смотрит на свой кусок данных и формирует сигнал: «в пуле Uniswap появилась крупная ликвидность», «цена пробила скользящую среднюю», «в Discord проекта анонсировали партнёрство»
-3. **Синтез (A4)** — сводный агент получает сигналы от всех трёх аналитиков и решает: *какая стратегия лучше всего подходит под текущую картину?*
-4. **Риск-контроль (A5)** — последний агент перед исполнением проверяет: *не слишком ли большой размер позиции? Где стоп-лосс? Не превышен ли дневной лимит убытков?*
-5. **Исполнение** — готовый ордер с параметрами уходит в Hummingbot, который выставляет его на Uniswap
+1. **Data flows in** — the RPC node, exchanges and social media feed raw data to the three analyst agents (A1, A2, A3)
+2. **Analysis** — each agent looks at its own slice of data and forms a signal: "large liquidity just appeared in a Uniswap pool", "the price broke through the moving average", "the project announced a partnership on Discord"
+3. **Synthesis (A4)** — the consolidating agent receives signals from all three analysts and decides: *which strategy fits the current market picture best?*
+4. **Risk control (A5)** — the last agent before execution checks: *is the position size too big? Where is the stop-loss? Has the daily loss limit been exceeded?*
+5. **Execution** — the finished order with its parameters goes to Hummingbot, which places it on Uniswap
 
-**Ключевой принцип:** ни один агент не торгует в одиночку. Каждый делает свою часть работы и передаёт эстафету дальше по цепочке.
+**Key principle:** no agent trades alone. Each one does its part of the work and passes the baton further down the chain.
 
 ---
 
-## 3. Зачем нужно несколько агентов
+## 3. Why you need multiple agents
 
-Один агент = одна точка отказа. Рынок сложный — нужна специализация:
+One agent = a single point of failure. The market is complex — you need specialization:
 
-| Агент | Роль | Частота |
+| Agent | Role | Frequency |
 |-------|------|---------|
-| **On-Chain Agent** | Мониторит мемпул, пулы ликвидности, крупные свопы. Находит опережающие сигналы до того как цена изменилась | Каждые 2-5 секунд |
-| **Market Data Agent** | Собирает цены с CEX, считает спреды, волатильность, объёмы. Выявляет тренды | Каждые 30-60 секунд |
-| **Sentiment Agent** | Анализирует Twitter/Discord проекта. Ловит анонсы до того как их заметил рынок | Каждые 5-15 минут |
-| **Backtest Agent** | Прогоняет стратегии на исторических данных. Отвечает: «а что было бы, если бы мы торговали эту стратегию последний месяц?» | По запросу / раз в час |
-| **Orchestrator Agent** | Собирает выводы аналитиков, выбирает стратегию, передаёт Risk Agent'у | Каждую минуту |
-| **Risk Agent** | Считает размер позиции, стоп-лосс, максимальный допустимый убыток на день. Блокирует сделку если риск > порога | На каждую сделку |
+| **On-Chain Agent** | Monitors the mempool, liquidity pools, large swaps. Finds leading signals before the price moves | Every 2-5 seconds |
+| **Market Data Agent** | Collects prices from CEXes, computes spreads, volatility, volumes. Detects trends | Every 30-60 seconds |
+| **Sentiment Agent** | Analyzes the project's Twitter/Discord. Catches announcements before the market notices them | Every 5-15 minutes |
+| **Backtest Agent** | Runs strategies on historical data. Answers: "what would have happened if we had traded this strategy for the last month?" | On demand / once an hour |
+| **Orchestrator Agent** | Collects the analysts' conclusions, picks a strategy, passes it to the Risk Agent | Every minute |
+| **Risk Agent** | Computes the position size, stop-loss, maximum acceptable daily loss. Blocks a trade if the risk exceeds the threshold | For every trade |
 
 ---
 
-## 4. Где брать стратегии
+## 4. Where to get strategies
 
-**Готовые стратегии (стартовая точка):**
+**Ready-made strategies (a starting point):**
 
-- Hummingbot поставляется с 10+ встроенными стратегиями: Pure Market Making, Cross-Exchange Market Making, Avellaneda-Stoikov, AMM Arbitrage, Perpetual Market Making
-- [hummingbot.org/strategies](https://hummingbot.org/strategies/) — документация и параметры
-- Сообщество Hummingbot публикует кастомные стратегии на GitHub и Discord
+- Hummingbot ships with 10+ built-in strategies: Pure Market Making, Cross-Exchange Market Making, Avellaneda-Stoikov, AMM Arbitrage, Perpetual Market Making
+- [hummingbot.org/strategies](https://hummingbot.org/strategies/) — documentation and parameters
+- The Hummingbot community publishes custom strategies on GitHub and Discord
 
-**Что делаем сами:**
+**What we build ourselves:**
 
-Стратегия — это не просто «купи дёшево, продай дорого». В контексте ИИ — это функция, которая принимает на вход сигналы от агентов-аналитиков и возвращает действие:
+A strategy is not just "buy low, sell high". In an AI context, it's a function that takes the analyst agents' signals as input and returns an action:
 
 ```
-Стратегия = f(сигнал_ончейн, сигнал_рынок, сигнал_сентимент, параметры_риска) → {BUY, SELL, HOLD, ADD_LIQUIDITY, ...}
+Strategy = f(on_chain_signal, market_signal, sentiment_signal, risk_parameters) → {BUY, SELL, HOLD, ADD_LIQUIDITY, ...}
 ```
 
-**Адаптация стратегий.** Рынок меняется: стратегия, работавшая в боковике, сливает в тренде. Нужна адаптация:
+**Strategy adaptation.** The market changes: a strategy that worked in a sideways market bleeds in a trend. You need adaptation:
 
-1. **Переключение стратегий** — Orchestrator выбирает стратегию под текущий режим рынка (тренд/флэт/высокая волатильность)
-2. **Динамические параметры** — risk agent подстраивает размер позиции, спред, частоту под волатильность
-3. **A/B тестирование** — две стратегии работают параллельно на бумажной торговле; побеждает та, у которой выше Sharpe ratio за период
-4. **Генетические алгоритмы** — ИИ перебирает параметры стратегии, оптимизируя под последние N дней рынка
+1. **Strategy switching** — the Orchestrator picks a strategy for the current market regime (trend / flat / high volatility)
+2. **Dynamic parameters** — the risk agent adjusts the position size, spread and frequency to the volatility
+3. **A/B testing** — two strategies run in parallel on paper trading; the one with the higher Sharpe ratio over the period wins
+4. **Genetic algorithms** — the AI iterates over strategy parameters, optimizing for the last N days of the market
 
 ---
 
-## 5. Hummingbot — готовый движок для исполнения
+## 5. Hummingbot — a ready-made execution engine
 
-**[Hummingbot](https://hummingbot.org/)** — open-source бот для algorithmic trading. Не надо писать движок с нуля.
+**[Hummingbot](https://hummingbot.org/)** — an open-source bot for algorithmic trading. No need to write an engine from scratch.
 
-**Что Hummingbot уже умеет:**
-- Подключение к CEX (Binance, Coinbase, Kraken, 30+) и DEX (Uniswap, PancakeSwap, dYdX)
-- Лимитные и рыночные ордера, сеточная торговля
-- Бумажная торговля (paper trading) с виртуальным балансом
-- Бэктестинг стратегий на исторических данных
-- Веб-интерфейс (Hummingbot Dashboard)
-- Telegram-уведомления
+**What Hummingbot already does:**
+- Connects to CEXes (Binance, Coinbase, Kraken, 30+) and DEXes (Uniswap, PancakeSwap, dYdX)
+- Limit and market orders, grid trading
+- Paper trading with a virtual balance
+- Backtesting strategies on historical data
+- Web interface (Hummingbot Dashboard)
+- Telegram notifications
 
-**Что мы добавляем (ИИ-надстройка):**
-- Агенты-аналитики (см. архитектуру выше) → передают сигналы в Hummingbot через API
-- Orchestrator → выбирает стратегию и параметры
-- Risk Agent → устанавливает лимиты через Hummingbot API
-- MCP-сервер для Hummingbot → агенты отдают команды на исполнение
+**What we add on top (the AI layer):**
+- Analyst agents (see the architecture above) → pass signals to Hummingbot via the API
+- Orchestrator → picks the strategy and parameters
+- Risk Agent → sets limits via the Hummingbot API
+- An MCP server for Hummingbot → agents issue execution commands
 
-**Схема интеграции:**
+**Integration diagram:**
 
 ```
-ИИ-Агенты (анализ, стратегия)
+AI Agents (analysis, strategy)
         ↓  (MCP Server)
   Hummingbot Gateway API
         ↓
-  Hummingbot Core (исполнение)
+  Hummingbot Core (execution)
         ↓
   Uniswap V3 (Base L2)
 ```
 
 ---
 
-## 6. Бумажная торговля — железное правило
+## 6. Paper trading — the iron rule
 
-> **Никогда не давайте агенту реальные деньги до того как он докажет прибыльность на виртуальном балансе.**
+> **Never give an agent real money until it has proven profitability on a virtual balance.**
 
-**Почему:**
-- Стратегия может содержать логическую ошибку, которая видна только на реальных данных
-- Рыночные условия могут измениться между бэктестом и живой торговлей
-- Агент может неправильно интерпретировать сигнал и открыть убыточную позицию
-- Ошибка в смарт-контракте или ABI = потеря всех средств
+**Why:**
+- A strategy may contain a logic error that only shows up on real data
+- Market conditions may change between the backtest and live trading
+- The agent may misinterpret a signal and open a losing position
+- A mistake in a smart contract or ABI = losing all funds
 
-**Процесс:**
+**The process:**
 
-1. **Бумажная торговля (Paper Trading)** — минимум 2 недели, все агенты работают, но с виртуальным балансом
-2. **Минимальный реальный депозит** — $50-100, только одна стратегия, жёсткий стоп-лосс
-3. **Постепенное масштабирование** — увеличивать баланс на 20% в неделю, только если предыдущая неделя в плюсе
-4. **Kill switch** — если дневной убыток > 5% депозита, все агенты останавливаются до ручного разбора
+1. **Paper trading** — at least 2 weeks, all agents run, but with a virtual balance
+2. **Minimum real deposit** — $50-100, a single strategy, a hard stop-loss
+3. **Gradual scaling** — increase the balance by 20% per week, only if the previous week was profitable
+4. **Kill switch** — if the daily loss exceeds 5% of the deposit, all agents stop until a manual review
 
 ---
 
-## 7. Навыки, MCP-сервера и контекст агентов
+## 7. Skills, MCP servers and agent context
 
-Чтобы агенты работали как команда, каждому нужны:
+For agents to work as a team, each one needs:
 
-| Компонент | Зачем | Пример |
+| Component | Why | Example |
 |-----------|-------|--------|
-| **Agent Skills** | Специализированные инструкции: анализ on-chain данных, работа с ABI, расчёт метрик | `@onchain-analyst`, `@risk-manager`, `@backtest-engine` |
-| **MCP-сервера** | Дают агенту доступ к внешним системам: RPC-нода, Hummingbot API, база данных | SupaBase MCP (хранение сигналов), Alchemy MCP (чтение блокчейна), Hummingbot MCP (исполнение) |
-| **Контекст** | Исторические данные, параметры стратегий, правила риск-менеджмента, журнал сделок | AGENTS.md с правилами торговли, DATABASE.md со схемой данных, STRATEGIES.md с параметрами |
+| **Agent Skills** | Specialized instructions: on-chain data analysis, working with ABIs, computing metrics | `@onchain-analyst`, `@risk-manager`, `@backtest-engine` |
+| **MCP servers** | Give the agent access to external systems: RPC node, Hummingbot API, database | SupaBase MCP (storing signals), Alchemy MCP (reading the blockchain), Hummingbot MCP (execution) |
+| **Context** | Historical data, strategy parameters, risk-management rules, trade journal | AGENTS.md with trading rules, DATABASE.md with the data schema, STRATEGIES.md with parameters |
 
-**Пример AGENTS.md для торгового агента:**
+**Example AGENTS.md for a trading agent:**
 
 ```
 ROLE: Risk Manager Agent
 
-INPUT: сигнал от Orchestrator с предложенной сделкой
-OUTPUT: approve/reject + параметры (размер позиции, стоп-лосс)
+INPUT: a signal from the Orchestrator with a proposed trade
+OUTPUT: approve/reject + parameters (position size, stop-loss)
 
 RULES:
-- Максимальный размер позиции = 5% депозита
-- Стоп-лосс = -2% от размера позиции
-- Максимальный дневной убыток = -10% депозита (kill switch)
-- Не открывать позицию если волатильность за 1ч > 15%
-- Не торговать токенами с ликвидностью < $100K
-- Проверять slippage перед каждой сделкой
+- Maximum position size = 5% of the deposit
+- Stop-loss = -2% of the position size
+- Maximum daily loss = -10% of the deposit (kill switch)
+- Do not open a position if 1h volatility > 15%
+- Do not trade tokens with liquidity < $100K
+- Check slippage before every trade
 ```
 
 ---
 
-## 8. Что нужно знать чтобы создавать таких ботов с нуля
+## 8. What you need to know to build such bots from scratch
 
-Ниже — обязательный минимум знаний и навыков. Порядок — от фундамента к готовой системе.
+Below is the required minimum of knowledge and skills. The order goes from fundamentals to a finished system.
 
-**Инструменты разработки:**
+**Development tools:**
 
-- GitHub — версионирование стратегий, конфигов, кода агентов
-- IDE + LLM — вся разработка через AI-промпты
+- GitHub — versioning of strategies, configs, agent code
+- IDE + LLM — all development through AI prompts
 
-**Блокчейн и DeFi — база:**
+**Blockchain and DeFi — the basics:**
 
-- Как работает Ethereum и L2-сети (Base). Что такое газ, транзакции, блоки, финализация
-- Как работает Uniswap V3: пулы ликвидности, AMM, свопы, проскальзывание (slippage), комиссии, диапазоны ликвидности
-- Что такое ABI контракта и как через него вызывать функции (swap, addLiquidity, collectFees)
-- Как читать ончейн-данные: балансы, события (events), состояние пулов
+- How Ethereum and L2 networks (Base) work. What gas, transactions, blocks and finality are
+- How Uniswap V3 works: liquidity pools, AMM, swaps, slippage, fees, liquidity ranges
+- What a contract ABI is and how to call functions through it (swap, addLiquidity, collectFees)
+- How to read on-chain data: balances, events, pool state
 
-**ИИ-агенты — ядро системы:**
+**AI agents — the core of the system:**
 
-- Skills и AGENTS.md — каждый агент получает специализированные инструкции (роль, правила, ограничения)
-- Multi-agent architecture — оркестратор, аналитики, риск-менеджер. Как агенты обмениваются сигналами
-- Оптимизация контекста — чтобы агент не забывал правила во время многочасовой торговли
+- Skills and AGENTS.md — each agent gets specialized instructions (role, rules, constraints)
+- Multi-agent architecture — orchestrator, analysts, risk manager. How agents exchange signals
+- Context optimization — so an agent doesn't forget the rules during hours-long trading
 
-**Работа с данными:**
+**Working with data:**
 
-- Обращение к RPC-ноде для чтения блокчейна
-- Web3-библиотеки: ethers.js или viem — отправка транзакций, вызов контрактов, чтение событий
-- Базы Данных — хранение сигналов, сделок, метрик стратегий
-- API бирж и агрегаторов — рыночные данные
+- Calling an RPC node to read the blockchain
+- Web3 libraries: ethers.js or viem — sending transactions, calling contracts, reading events
+- Databases — storing signals, trades, strategy metrics
+- Exchange and aggregator APIs — market data
 
-**Инфраструктура:**
+**Infrastructure:**
 
-- Свой сервер (VPS) — Установка Linux, SSH, файрвол
-- Hummingbot — установка, конфигурация, подключение кошелька, стратегии
-- MCP-сервера — связь между ИИ-агентами и Hummingbot (агент отдаёт команду → Hummingbot исполняет)
-- PM2 — авто-перезапуск агентов и бота при падении
-- Telegram-бот — оповещения о сделках, kill switch, ежедневный PnL-отчёт
+- Your own server (VPS) — Linux setup, SSH, firewall
+- Hummingbot — installation, configuration, wallet connection, strategies
+- MCP servers — the link between AI agents and Hummingbot (the agent issues a command → Hummingbot executes it)
+- PM2 — auto-restart of the agents and the bot on failure
+- Telegram bot — trade alerts, kill switch, daily PnL report
 
-**Безопасность:**
+**Security:**
 
-- Приватные ключи — никогда не хранить в коде, только в `.env`, который в `.gitignore`
-- Бумажная торговля — минимум 2 недели на виртуальном балансе перед реальными деньгами
-- Лимиты риска — максимальный размер позиции, стоп-лосс, дневной лимит убытков
-- Kill switch — автоматическая остановка всех агентов при убытке > порога
+- Private keys — never store them in code, only in `.env`, which is in `.gitignore`
+- Paper trading — at least 2 weeks on a virtual balance before real money
+- Risk limits — maximum position size, stop-loss, daily loss limit
+- Kill switch — automatic stop of all agents when the loss exceeds the threshold
 
-**Анализ и метрики:**
+**Analysis and metrics:**
 
-- Бэктестинг — прогон стратегии на исторических данных перед запуском
-- Ключевые метрики: PnL, Sharpe ratio, win rate, maximum drawdown, profit factor
-- LLM Wiki — журнал сделок, агенты пишут отчёт после каждой торговой сессии
+- Backtesting — running the strategy on historical data before launch
+- Key metrics: PnL, Sharpe ratio, win rate, maximum drawdown, profit factor
+- LLM Wiki — a trade journal; agents write a report after every trading session
 
 ---
 
-## 9. Итог: минимальный стек для старта
+## 9. Summary: the minimal stack to start
 
 ```
 ├── Agents 
@@ -260,24 +260,24 @@ RULES:
 │   └── Risk Agent
 │
 ├── Execution
-│   └── Hummingbot (на своём VPS)
-│       └── Стратегия: Pure Market Making + ИИ-адаптация
+│   └── Hummingbot (on your own VPS)
+│       └── Strategy: Pure Market Making + AI adaptation
 │
 ├── Data Storage 
-│   ├── signals (сигналы агентов)
-│   ├── trades (исполненные сделки)
+│   ├── signals (agent signals)
+│   ├── trades (executed trades)
 │   └── metrics (PnL, Sharpe, win rate)
 │
 ├── Infrastructure
 │   ├── Alchemy RPC (Base L2)
-│   ├── VPS ($4/мес или собственный сервер)
-│   └── PM2 (авто-перезапуск)
+│   ├── VPS ($4/month or your own server)
+│   └── PM2 (auto-restart)
 │
 └── Monitoring
-    ├── Telegram Bot (оповещения)
-    └── LLM Wiki (журнал + анализ)
+    ├── Telegram Bot (alerts)
+    └── LLM Wiki (journal + analysis)
 ```
 
 ---
 
-Если вам интересно узнать как это можно сделать, мы разработали курс из 10 занятий [ИИ-Агенты для торговли криптой](https://github.com/Distributed-Validators-Synctems/AI-School/blob/master/AI-crypto-trading-course.md)
+If you're interested in how this can be done, we've developed a 10-session course: [AI Agents for Crypto Trading](https://github.com/Distributed-Validators-Synctems/AI-School/blob/master/AI-crypto-trading-course.md)

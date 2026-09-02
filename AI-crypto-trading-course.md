@@ -1,138 +1,137 @@
-# ИИ-Агенты для торговли криптой
+# AI Agents for Crypto Trading
 
-**Интенсивный курс: 10 занятий**
+**Intensive course: 10 sessions**
 
-Курс для тех, кто хочет построить автономную торговую систему на базе ИИ-агентов. От установки инструментов до полностью autonomous trading system которая работает 24/7 на своём сервере.
+A course for those who want to build an autonomous trading system powered by AI agents. From installing the tools to a fully autonomous trading system that runs 24/7 on your own server.
 
-Подробнее, о том что надо чтобы [Искусственный Интеллект торговл криптой](https://github.com/Distributed-Validators-Synctems/AI-School/blob/master/AI-crypto-trading.md)
+Learn more about what it takes for [Artificial Intelligence to trade crypto](https://github.com/Distributed-Validators-Synctems/AI-School/blob/master/AI-crypto-trading.md)
 
-[По поводу оплаты и другие часто-задаваемые вопросы](https://github.com/Distributed-Validators-Synctems/AI-School/blob/master/FAQ_ru.md)
+[Payment and other frequently asked questions](https://github.com/Distributed-Validators-Synctems/AI-School/blob/master/FAQ.md)
 
-## Как записаться на курс в ИИ-Школу
+## How to enroll in the AI School course
 
-Сейчас идет набор в группу обучения с живыми менторами. Чтобы принять участие:
-1. **Заполните анкету:** [Форма заявки](https://forms.gle/H6JGuZuCvZk1wZV2A)
-2. **Вступите в группу Telegram:** [AI School RU](https://t.me/+-J39zeyt-s41MWUy)
-3. **Напишите в чат:** После заполнения анкеты представьтесь в группе и напишите, что форма заполнена.
+Enrollment is now open for a study group with live mentors. To take part:
+1. **Fill out the application form:** [Application form](https://forms.gle/H6JGuZuCvZk1wZV2A)
+2. **Join the Telegram group:** [AI School RU](https://t.me/+-J39zeyt-s41MWUy)
+3. **Write in the chat:** after filling out the form, introduce yourself in the group and mention that the form has been submitted.
 ---
 
-## Стек инструментов
+## Tool stack
 
-- **Среда:** IDE + LLM API
-- **Блокчейн:** Ethereum / Base L2, Public RPC
+- **Environment:** IDE + LLM API
+- **Blockchain:** Ethereum / Base L2, Public RPC
 - **DEX:** Uniswap V3
-- **Исполнение:** Hummingbot (open-source trading bot)
-- **База данных:** PostgreSQL
-- **Мониторинг:** Telegram Bot
-- **Инфраструктура:** VPS, PM2
+- **Execution:** Hummingbot (open-source trading bot)
+- **Database:** PostgreSQL
+- **Monitoring:** Telegram Bot
+- **Infrastructure:** VPS, PM2
 
 ---
 
-## Учебный план
+## Curriculum
 
-### Занятие 01: GitHub, IDE и LLM API
-- Создание GitHub репозитория для трейдинг-проекта
-- Установка IDE и подключение LLM API
-- Первый крипто-скрипт через AI: проверка цены ETH
-- Безопасность: `.env` и `.gitignore` — почему секреты никогда не попадают в код
-- Результат: работает связка GitHub + IDE + LLM API
+### Session 01: GitHub, IDE and LLM API
+- Creating a GitHub repository for the trading project
+- Installing an IDE and connecting the LLM API
+- First crypto script via AI: checking the ETH price
+- Security: `.env` and `.gitignore` — why secrets never end up in code
+- Result: a working GitHub + IDE + LLM API pipeline
 
-### Занятие 02: Интеллект ИИ-агентов
-- Токены и контекст: почему агент «забывает» правила после долгой работы
-- AGENTS.md — инструкция которую агент видит всегда
-- Agent Skills — готовая специализация (code-reviewer, python-expert, senior-architect)
-- Проектируем AGENTS.md для 5 трейдинг-агентов
-- Результат: агенты имеют чёткие роли и не забывают правила
+### Session 02: The intelligence of AI agents
+- Tokens and context: why an agent "forgets" the rules after working for a long time
+- AGENTS.md — the instructions an agent always sees
+- Agent Skills — ready-made specializations (code-reviewer, python-expert, senior-architect)
+- Designing AGENTS.md for 5 trading agents
+- Result: agents have clear roles and don't forget the rules
 
-### Занятие 03: Архитектура системы и команда агентов
-- Проектируем ARCHITECTURE.md: источники данных, агенты, исполнение, мониторинг
-- SPECIFICATION.md: что делает каждый компонент, входы и выходы
-- PLAN.md: 6 фаз строительства
-- Создаём команду из 5 агентов: On-Chain, Market, Orchestrator, Risk
-- Агенты обмениваются сигналами через базу данных
-- Тестируем цепочку: сигнал → оркестратор → риск-менеджер → решение
-- Результат: полная архитектура и работающая команда агентов
+### Session 03: System architecture and the agent team
+- Designing ARCHITECTURE.md: data sources, agents, execution, monitoring
+- SPECIFICATION.md: what each component does, its inputs and outputs
+- PLAN.md: 6 build phases
+- Creating a team of 5 agents: On-Chain, Market, Orchestrator, Risk
+- Agents exchange signals through a database
+- Testing the chain: signal → orchestrator → risk manager → decision
+- Result: a complete architecture and a working team of agents
 
-### Занятие 04: Блокчейн и Uniswap V3
-- Ethereum и Base L2: газ, блоки, транзакции — что нужно знать разработчику
-- Кошелёк для бота: почему отдельный, как хранить приватный ключ
-- RPC-нода (бесплатно): читаем балансы, пулы, события
-- Uniswap V3 изнутри: пулы ликвидности, котировки свопов
-- Тестовый своп на Base Sepolia
-- Мониторинг пулов в реальном времени для On-Chain Agent
-- Результат: бот читает блокчейн и может исполнить своп
+### Session 04: Blockchain and Uniswap V3
+- Ethereum and Base L2: gas, blocks, transactions — what a developer needs to know
+- A wallet for the bot: why it should be separate, how to store the private key
+- RPC node (free): reading balances, pools, events
+- Uniswap V3 under the hood: liquidity pools, swap quotes
+- A test swap on Base Sepolia
+- Real-time pool monitoring for the On-Chain Agent
+- Result: the bot reads the blockchain and can execute a swap
 
-### Занятие 05: База данных
-- Создание PostgreSQL проекта
-- Проектируем схему: сигналы, предложенные сделки, одобренные сделки, метрики
-- Подключаем агентов к базе: On-Chain Agent пишет сигналы, Orchestrator читает
-- Row-Level Security: защита данных от внешнего доступа
-- Результат: все сигналы и сделки хранятся структурированно
+### Session 05: Database
+- Creating a PostgreSQL project
+- Designing the schema: signals, proposed trades, approved trades, metrics
+- Connecting agents to the database: the On-Chain Agent writes signals, the Orchestrator reads them
+- Row-Level Security: protecting data from external access
+- Result: all signals and trades are stored in a structured way
 
-### Занятие 06: Hummingbot и MCP-сервер
-- Установка Hummingbot через Docker
-- Настройка для Base + Uniswap V3
-- Бумажная торговля с виртуальным балансом
-- Создание MCP-сервера: мост между ИИ-агентами и Hummingbot
-- Тест: агент отдаёт команду → MCP → Hummingbot → своп
-- Результат: агенты управляют реальным трейдинг-ботом
+### Session 06: Hummingbot and the MCP server
+- Installing Hummingbot via Docker
+- Configuring it for Base + Uniswap V3
+- Paper trading with a virtual balance
+- Building an MCP server: a bridge between AI agents and Hummingbot
+- Test: the agent issues a command → MCP → Hummingbot → swap
+- Result: agents control a real trading bot
 
-### Занятие 07: Бэктестинг, бумажная торговля и безопасность
-- Бэктестинг стратегии на исторических данных (30 дней)
-- Метрики: PnL, Sharpe ratio, win rate, max drawdown, profit factor
-- Полный прогон системы на бумажной торговле (24+ часа)
-- Анализ результатов: какие сигналы прибыльные, какие ложные
-- Kill switch: авто-остановка при убытке > 5%
-- Аудит безопасности: приватные ключи, RPC URL, ключи от базы данных
-- Результат: стратегия проверена, система готова к реальным деньгам
+### Session 07: Backtesting, paper trading and security
+- Backtesting the strategy on historical data (30 days)
+- Metrics: PnL, Sharpe ratio, win rate, max drawdown, profit factor
+- Full system run on paper trading (24+ hours)
+- Analyzing the results: which signals are profitable, which are false
+- Kill switch: auto-stop when the loss exceeds 5%
+- Security audit: private keys, RPC URL, database keys
+- Result: the strategy is verified, the system is ready for real money
 
-### Занятие 08: Telegram-бот для мониторинга
-- Создание бота
-- Команды: `/status`, `/pnl`, `/stop`, `/start`, `/alerts`
-- Критические алерты: агент упал, баланс ниже порога, аномальная волатильность
-- Ежедневный авто-отчёт каждое утро в 9:00
-- Kill switch по команде из Telegram
-- Результат: полный контроль системы с телефона
+### Session 08: Telegram bot for monitoring
+- Creating the bot
+- Commands: `/status`, `/pnl`, `/stop`, `/start`, `/alerts`
+- Critical alerts: agent crashed, balance below threshold, abnormal volatility
+- Daily automated report every morning at 9:00
+- Kill switch via a command from Telegram
+- Result: full control of the system from your phone
 
-### Занятие 09: Деплой на сервер
-- Покупка VPS (~$4/мес)
-- Настройка сервера: Ubuntu, Docker, файрвол
-- Перенос проекта: клонирование, `.env`, зависимости
-- PM2: авто-перезапуск всех агентов при падении
-- Проверка: система работает после отключения от SSH
-- Мониторинг сервера: CPU, RAM, диск, аптайм
-- Результат: система работает 24/7
+### Session 09: Deploying to a server
+- Buying a VPS (~$4/month)
+- Server setup: Ubuntu, Docker, firewall
+- Migrating the project: cloning, `.env`, dependencies
+- PM2: auto-restart of all agents on failure
+- Verification: the system keeps running after disconnecting from SSH
+- Server monitoring: CPU, RAM, disk, uptime
+- Result: the system runs 24/7
 
-### Занятие 10: Финальный проект — автономная система
-- LLM Wiki: агенты ведут журнал сделок в Obsidian-совместимом формате
-- Авто-компилятор: еженедельный анализ + рекомендации по улучшению стратегий
-- Авто-улучшение: безопасные изменения применяются автоматически
-- Переход к реальным деньгам: чеклист, минимальный депозит ($50-100)
-- Презентация проекта для портфолио
-- Результат: полностью автономная трейдинг-система
+### Session 10: Final project — an autonomous system
+- LLM Wiki: agents keep a trade journal in an Obsidian-compatible format
+- Auto-compiler: weekly analysis + recommendations for improving strategies
+- Auto-improvement: safe changes are applied automatically
+- Moving to real money: checklist, minimum deposit ($50-100)
+- Presenting the project for your portfolio
+- Result: a fully autonomous trading system
 
 ---
 
-## Что вы построите
+## What you will build
 
 ```
 RPC Node → On-Chain Agent → Orchestrator Agent → Risk Agent → Hummingbot → Uniswap
               Market Agent ↗      ↑
-            Sentiment Agent ↗    стратегии + бэктесты
+            Sentiment Agent ↗    strategies + backtests
 ```
 
-- **5 ИИ-агентов** со специализированными ролями
-- **Hummingbot** — исполнение ордеров на Uniswap V3 (Base L2)
-- **MCP-сервер** — связь агентов с трейдинг-ботом
-- **Data Base** — хранение сигналов, сделок, метрик
-- **Telegram-бот** — мониторинг 24/7
-- **Авто-компилятор** — еженедельный анализ и улучшение стратегий
+- **5 AI agents** with specialized roles
+- **Hummingbot** — order execution on Uniswap V3 (Base L2)
+- **MCP server** — connecting agents to the trading bot
+- **Database** — storage for signals, trades, metrics
+- **Telegram bot** — 24/7 monitoring
+- **Auto-compiler** — weekly analysis and strategy improvements
 
 ---
 
-## Отличия от основного курса AI School
+## Differences from the main AI School course
 
-- Крипто-контекст во всех примерах
-- Фокус на скиллах и MCP для крипто-торговли
-- Безопасность: приватные ключи, kill switch, лимиты риска
-
+- Crypto context in all examples
+- Focus on skills and MCP for crypto trading
+- Security: private keys, kill switch, risk limits
